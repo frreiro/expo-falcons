@@ -1,7 +1,18 @@
 {
+  "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "module": "es6"
-  },
-  "extends": "expo/tsconfig.base"
+    "module": "es6",
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/app/components/*"],
+      "@layouts/*": ["src/app/layouts/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@providers/*": ["src/app/providers/*"],
+      "@globalStyle/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"],
+      "@redux/*": ["src/redux/*"],
+      "@resource/*": ["resource/*"]
+    }
+  }
 }
