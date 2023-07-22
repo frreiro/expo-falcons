@@ -6,6 +6,8 @@ import * as SplashScreen from 'expo-splash-screen';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
+import ReduxProvider from './providers';
+
 SplashScreen.preventAutoHideAsync();
 
 export default function App() {
@@ -32,11 +34,13 @@ export default function App() {
     return null;
   }
   return (
-    <View style={styles.container} onLayout={onLayoutRootView}>
-      <NavigationContainer>
-        <Tabs />
-      </NavigationContainer>
-    </View>
+    <ReduxProvider>
+      <View style={styles.container} onLayout={onLayoutRootView}>
+        <NavigationContainer>
+          <Tabs />
+        </NavigationContainer>
+      </View>
+    </ReduxProvider>
   );
 }
 
