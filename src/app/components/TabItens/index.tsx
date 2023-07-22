@@ -6,7 +6,7 @@ import React from 'react';
 
 export type RootStackParamList = {
   Home: undefined;
-  RA: undefined;
+  Objects: undefined;
   Documents: undefined;
 };
 
