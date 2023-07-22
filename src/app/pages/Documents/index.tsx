@@ -1,10 +1,11 @@
+import MainLayout from '@app/layouts';
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
 
 export default function Documents() {
   return (
-    <View>
+    <MainLayout title="DOCUMENTS">
       <Text>oPA</Text>
-    </View>
+    </MainLayout>
   );
 }

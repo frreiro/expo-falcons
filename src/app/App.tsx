@@ -1,8 +1,8 @@
 import Tabs from '@components/TabItens/index';
+import { GlobalStyles } from '@globalStyle/GlobalStyles';
 import { NavigationContainer } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
@@ -33,7 +33,6 @@ export default function App() {
   }
   return (
     <View style={styles.container} onLayout={onLayoutRootView}>
-      <StatusBar style="auto" />
       <NavigationContainer>
         <Tabs />
       </NavigationContainer>
@@ -44,5 +43,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: GlobalStyles.colors.primary,
   },
 });
