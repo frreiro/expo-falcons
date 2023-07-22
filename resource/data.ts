@@ -1,3 +1,5 @@
+import { ImageRequireSource } from 'react-native';
+
 export type AugmentReality = {
   electrical: [];
   powertrain: [];
@@ -17,7 +19,7 @@ export type Documents = {
 export type YearsData = {
   id: number;
   year: string;
-  image: string;
+  image: ImageRequireSource;
   title: string;
   documents: Documents[];
   augment_reality: AugmentReality;
@@ -32,7 +34,7 @@ const Falcons: IFalcons = {
     {
       id: 0,
       year: '2022',
-      image: '',
+      image: require('../assets/images/carro.png'),
       title: 'Protótipo 2022',
       documents: [
         {
@@ -60,7 +62,7 @@ const Falcons: IFalcons = {
     {
       id: 1,
       year: '2023',
-      image: '',
+      image: require('../assets/images/carro.png'),
       title: 'Protótipo 2023',
       documents: [],
       augment_reality: {

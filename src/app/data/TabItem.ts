@@ -1,6 +1,6 @@
 import { RootStackParamList } from '@components/TabItens';
 import Documents from '@pages/Documents';
-// import Home from '@pages/Home';
+import Home from '@pages/Home';
 // import RA from '@pages/RA';
 
 export type TabInfoType = {
@@ -24,7 +24,7 @@ export const tabItens: TabInfoType[] = [
     name: 'Home',
     focusedIcon: 'home',
     unfocusedIcon: 'home-outline',
-    component: Documents,
+    component: Home,
   },
   {
     id: 2,

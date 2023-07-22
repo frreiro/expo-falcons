@@ -8,12 +8,12 @@ module.exports = function (api) {
         {
           alias: {
             // This needs to be mirrored in tsconfig.json
+            '@assets': './assets/',
             '@app': './src/app',
             '@components': './src/app/components',
             '@layouts': './src/app/layouts',
             '@pages': './src/app/pages',
             '@globalStyle': './src/styles',
-            '@assets': './src/assets',
             '@redux': './src/redux',
             '@providers': './src/app/providers',
             '@resource': './resource',
