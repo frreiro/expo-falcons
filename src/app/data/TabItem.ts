@@ -1,8 +1,7 @@
+import { RootStackParamList } from '@components/TabItens';
 import Documents from '@pages/Documents';
 // import Home from '@pages/Home';
 // import RA from '@pages/RA';
-
-import { RootStackParamList } from '../App';
 
 export type TabInfoType = {
   id: number;

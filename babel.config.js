@@ -8,6 +8,7 @@ module.exports = function (api) {
         {
           alias: {
             // This needs to be mirrored in tsconfig.json
+            '@app': './src/app',
             '@components': './src/app/components',
             '@layouts': './src/app/layouts',
             '@pages': './src/app/pages',

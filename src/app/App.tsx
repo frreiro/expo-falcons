@@ -1,57 +1,48 @@
-import TabIconItem from '@components/TabIconItem';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Tabs from '@components/TabItens/index';
 import { NavigationContainer } from '@react-navigation/native';
+import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
 
-import { GlobalStyles } from '../styles/GlobalStyles';
-import { TabInfoType, tabItens } from './data/TabItem';
+SplashScreen.preventAutoHideAsync();
 
-export type RootStackParamList = {
-  Home: undefined;
-  RA: undefined;
-  Documents: undefined;
-};
+export default function App() {
+  const [fontsLoaded] = useFonts({
+    'Handjet-Regular': require('../../assets/fonts/Handjet-Regular.ttf'),
+    'HandjetCircle-Black': require('../../assets/fonts/HandjetCircle-Black.ttf'),
+    'HandjetCircle-Bold': require('../../assets/fonts/HandjetCircle-Bold.ttf'),
+    'HandjetCircle-Extralight': require('../../assets/fonts/HandjetCircle-Extralight.ttf'),
+    'HandjetCircleDouble-Light': require('../../assets/fonts/HandjetCircleDouble-Light.ttf'),
+    'HandjetCircleDouble-Semibold': require('../../assets/fonts/HandjetCircleDouble-Semibold.ttf'),
+    'HandjetCircleDouble-Thin': require('../../assets/fonts/HandjetCircleDouble-Thin.ttf'),
+    'HandjetFlowerDouble-Medium': require('../../assets/fonts/HandjetFlowerDouble-Medium.ttf'),
+    'HandjetHeartDouble-Extrabold': require('../../assets/fonts/HandjetHeartDouble-Extrabold.ttf'),
+    'ShareTechMono-Regular': require('../../assets/fonts/ShareTechMono-Regular.ttf'),
+  });
 
-const Tab = createBottomTabNavigator<RootStackParamList>();
+  const onLayoutRootView = React.useCallback(async () => {
+    if (fontsLoaded) {
+      await SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
 
-export default function Tabs({
-  TabItens = tabItens,
-}: {
-  TabItens?: TabInfoType[];
-}) {
+  if (!fontsLoaded) {
+    return null;
+  }
   return (
-    <NavigationContainer>
-      <Tab.Navigator
-        initialRouteName="Home"
-        screenOptions={{
-          headerShown: false,
-          tabBarActiveTintColor: GlobalStyles.colors.primary,
-          tabBarInactiveTintColor: GlobalStyles.colors.primary,
-          tabBarShowLabel: false,
-          tabBarStyle: { backgroundColor: GlobalStyles.colors.secondary },
-        }}>
-        {TabItens.map(tab => {
-          return (
-            <Tab.Screen
-              key={tab.id}
-              name={tab.name}
-              component={tab.component}
-              options={{
-                tabBarIcon: ({ color, focused, size }) => (
-                  <TabIconItem
-                    id={tab.id}
-                    size={size}
-                    color={color}
-                    focused={focused}
-                    focusedIconName={tab.focusedIcon}
-                    unfocusedIconName={tab.unfocusedIcon}
-                  />
-                ),
-              }}
-            />
-          );
-        })}
-      </Tab.Navigator>
-    </NavigationContainer>
+    <View style={styles.container} onLayout={onLayoutRootView}>
+      <StatusBar style="auto" />
+      <NavigationContainer>
+        <Tabs />
+      </NavigationContainer>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
