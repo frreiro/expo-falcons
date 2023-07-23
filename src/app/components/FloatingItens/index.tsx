@@ -1,3 +1,4 @@
+import { SubMenuItem } from '@app/data/FloatingItemData';
 import { styles } from '@components/FloatingButton/styles';
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
 import React from 'react';
@@ -9,15 +10,19 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export default function FloatingItem({
-  animate,
-  primitivePosition,
-  iconName,
-}: {
+export interface IFloatingItem<T extends unknown> {
   animate: Animated.Value;
   primitivePosition: number;
-  iconName: string;
-}) {
+  item: T;
+  selectSubItem: (item: T) => void;
+}
+
+export default function FloatingItem<K extends SubMenuItem>({
+  animate,
+  primitivePosition,
+  item,
+  selectSubItem,
+}: IFloatingItem<K>) {
   const subMenuAnimationStyle: Animated.AnimatedProps<StyleProp<ViewStyle>> = {
     transform: [
       { scale: animate },
@@ -31,10 +36,14 @@ export default function FloatingItem({
   };
 
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback onPress={() => selectSubItem(item)}>
       <Animated.View
         style={[styles.button, styles.submenu, subMenuAnimationStyle]}>
-        <Icon name={iconName} size={20} color={GlobalStyles.colors.primary} />
+        <Icon
+          name={item.iconName}
+          size={20}
+          color={GlobalStyles.colors.primary}
+        />
       </Animated.View>
     </TouchableWithoutFeedback>
   );

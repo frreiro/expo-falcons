@@ -13,17 +13,19 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import FloatingItem from '../FloatingItens';
 import { styles } from './styles';
 
-export interface IFloatingButton {
+export interface IFloatingButton<T extends unknown> {
   style: ViewStyle;
-  submenuItems: SubMenuItem[];
+  submenuItems: T[];
   menuIcon: string;
+  selectSubItem: (item: T) => void;
 }
 
-export default function FloatingButton({
+export default function FloatingButton<K extends SubMenuItem>({
   style,
   submenuItems,
   menuIcon,
-}: IFloatingButton) {
+  selectSubItem,
+}: IFloatingButton<K>) {
   const isOpen = useRef(false);
   const animate = useRef(new Animated.Value(0)).current;
 
@@ -56,8 +58,9 @@ export default function FloatingButton({
           <FloatingItem
             key={item.id}
             animate={animate}
+            selectSubItem={selectSubItem}
             primitivePosition={index + 1}
-            iconName={item.iconName}
+            item={item}
           />
         );
       })}
