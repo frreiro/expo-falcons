@@ -1,4 +1,4 @@
-import { TabInfoType, tabItens } from '@app/data/TabItem';
+import { TabInfoType, tabItens } from '@app/data/TabItemData';
 import TabIconItem from '@components/TabIconItem';
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';

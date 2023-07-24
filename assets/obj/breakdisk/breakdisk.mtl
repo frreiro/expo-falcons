@@ -1,0 +1,120 @@
+#
+# Bunkspeed OBJ Material File
+# http://www.bunkspeed.com
+#
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl sandblasted_magnesium
+Kd 0.2980392 0.282353 0.2509804
+Ks 0.2980392 0.282353 0.2509804
+map_bump -bm 2 C:\Users\Lucas Vinícius\Documents\Falcons\2022\3Ds\Freio\Break Disk\obj\swsand_bump.jpg
+bump C:\Users\Lucas Vinícius\Documents\Falcons\2022\3Ds\Freio\Break Disk\obj\swsand_bump.jpg
+illum 2
+Ns 4.612315
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
+
+newmtl polished_steel
+Kd 0.7764706 0.7568628 0.7372549
+Ks 0.7764706 0.7568628 0.7372549
+illum 2
+Ns 99.90109
