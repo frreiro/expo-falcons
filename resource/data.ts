@@ -70,21 +70,6 @@ const Falcons: IFalcons = {
         },
       ],
       augment_reality: [
-        {
-          id: uuidv4(),
-          sectorName: 'Freio',
-          iconName: 'tire',
-          objects: [
-            {
-              id: uuidv4(),
-              iconName: 'alpha-a-circle',
-              name: 'Disco de freio',
-              obj: require('@assets/obj/breakdisk/breakdisk.obj'),
-              material: require('@assets/obj/breakdisk/breakdisk.mtl'),
-              texture: require('@assets/obj/breakdisk/swsand_bump.jpg'),
-            },
-          ],
-        },
         // electrical: [],
         // powertrain: [],
         // chassis: [],

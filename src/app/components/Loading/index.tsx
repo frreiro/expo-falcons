@@ -11,7 +11,7 @@ export default function Loading() {
 
   const { active, loaded, total } = useProgress();
   const [isLoading, setIsLoading] = useState(true);
-  console.log(isLoading);
+
   useEffect(() => {
     animationRef.current?.play();
     if (loaded !== total) return clearTimeout(timeoutRef.current);
