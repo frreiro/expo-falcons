@@ -1,4 +1,5 @@
 import { useFrame, useLoader } from '@react-three/fiber/native';
+import { ObjectInfo } from '@resource/data';
 import { THREE, TextureLoader } from 'expo-three';
 import { useLayoutEffect, useRef } from 'react';
 import { SharedValue } from 'react-native-reanimated';
@@ -7,6 +8,7 @@ import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 
 type ModelProps = {
+  object: ObjectInfo;
   offset: SharedValue<{ x: number; y: number }>;
   zoom: SharedValue<number>;
 };
@@ -16,21 +18,14 @@ export default function Model(props: ModelProps) {
 
   const material = useLoader(
     MTLLoader,
-    require('@assets/obj/breakdisk/breakdisk.mtl'),
+    props.object.material,
   ) as MTLLoader.MaterialCreator;
-  const obj = useLoader(
-    OBJLoader,
-    require('@assets/obj/breakdisk/breakdisk.obj'),
-    loader => {
-      material.preload();
-      loader.setMaterials(material);
-    },
-  ) as THREE.Group;
+  const obj = useLoader(OBJLoader, props.object.obj, loader => {
+    material.preload();
+    loader.setMaterials(material);
+  }) as THREE.Group;
 
-  const colorMap = useLoader(
-    TextureLoader,
-    require('@assets/obj/breakdisk/swsand_bump.jpg'),
-  );
+  const colorMap = useLoader(TextureLoader, props.object.texture);
 
   useLayoutEffect(() => {
     obj.traverse(child => {

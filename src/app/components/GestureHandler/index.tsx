@@ -1,6 +1,6 @@
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
-import { useProgress } from '@react-three/drei/native';
 import { Canvas } from '@react-three/fiber/native';
+import { ObjectInfo } from '@resource/data';
 import { Suspense } from 'react';
 import {
   Gesture,
@@ -11,10 +11,11 @@ import Animated, { useSharedValue } from 'react-native-reanimated';
 
 import Model from '../Model';
 
-export default function GestureHandler() {
-  const progrss = useProgress();
-  console.log(progrss);
+export type GestureHandlerProps = {
+  object: ObjectInfo;
+};
 
+export default function GestureHandler(props: GestureHandlerProps) {
   const isPressed = useSharedValue(false);
   const offset = useSharedValue({ x: 0, y: 0 });
 
@@ -72,7 +73,7 @@ export default function GestureHandler() {
               <Suspense fallback={null}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <Model offset={offset} zoom={zoom} />
+                <Model object={props.object} offset={offset} zoom={zoom} />
               </Suspense>
             </Canvas>
           </Animated.View>

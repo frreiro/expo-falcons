@@ -29,7 +29,7 @@ export default function Objects() {
         sector && object ? `${sector.sectorName} - ${object.name}` : ''
       }>
       <Loading />
-      <GestureHandler />
+      <GestureHandler object={object} />
       <FloatingButton
         submenuItems={year.augment_reality}
         menuIcon={sector ? sector.iconName : 'account-group'}

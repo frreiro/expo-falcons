@@ -6,9 +6,9 @@ export type ObjectInfo = {
   id: string;
   iconName: string;
   name: string;
-  obj: NodeRequire | string;
-  material: NodeRequire | string;
-  texture: NodeRequire | string;
+  obj: string;
+  material: string;
+  texture: string;
 };
 
 export type SectorInfo = {
