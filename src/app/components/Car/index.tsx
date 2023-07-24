@@ -4,7 +4,7 @@ import { Image, ImageRequireSource, Text, View } from 'react-native';
 import { styles } from './styles';
 
 export type CardType = {
-  id: number;
+  id: string;
   name: string;
   image_uri: ImageRequireSource;
 };

@@ -1,4 +1,5 @@
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
+import { useProgress } from '@react-three/drei/native';
 import { Canvas } from '@react-three/fiber/native';
 import { Suspense } from 'react';
 import {
@@ -11,6 +12,9 @@ import Animated, { useSharedValue } from 'react-native-reanimated';
 import Model from '../Model';
 
 export default function GestureHandler() {
+  const progrss = useProgress();
+  console.log(progrss);
+
   const isPressed = useSharedValue(false);
   const offset = useSharedValue({ x: 0, y: 0 });
 
@@ -58,20 +62,22 @@ export default function GestureHandler() {
   const composed = Gesture.Simultaneous(panGesture, pintchGesture);
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-      <GestureDetector gesture={composed}>
-        <Animated.View style={{ flex: 1 }}>
-          <Canvas
-            legacy={true}
-            style={{ backgroundColor: GlobalStyles.colors.primary }}>
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <Suspense fallback={null}>
-              <Model offset={offset} zoom={zoom} />
-            </Suspense>
-          </Canvas>
-        </Animated.View>
-      </GestureDetector>
-    </GestureHandlerRootView>
+    <>
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <GestureDetector gesture={composed}>
+          <Animated.View style={{ flex: 1 }}>
+            <Canvas
+              legacy={true}
+              style={{ backgroundColor: GlobalStyles.colors.primary }}>
+              <Suspense fallback={null}>
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <Model offset={offset} zoom={zoom} />
+              </Suspense>
+            </Canvas>
+          </Animated.View>
+        </GestureDetector>
+      </GestureHandlerRootView>
+    </>
   );
 }

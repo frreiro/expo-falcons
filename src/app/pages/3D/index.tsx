@@ -1,6 +1,7 @@
 //add
 import FloatingButton from '@app/components/FloatingButton';
 import GestureHandler from '@app/components/GestureHandler';
+import Loading from '@app/components/Loading';
 import MainLayout from '@app/layouts';
 import { useAppSelector } from '@redux/hooks';
 import { ObjectInfo, SectorInfo } from '@resource/data';
@@ -27,6 +28,7 @@ export default function Objects() {
       subtitle={
         sector && object ? `${sector.sectorName} - ${object.name}` : ''
       }>
+      <Loading />
       <GestureHandler />
       <FloatingButton
         submenuItems={year.augment_reality}

@@ -1,6 +1,6 @@
-import { ObjectInfo } from '@resource/data';
+import { ObjectInfo, SectorInfo } from '@resource/data';
 
-export interface SubMenuItem extends ObjectInfo;
+export type SubMenuItem = ObjectInfo | SectorInfo;
 // const subMenuItemsSector: SubMenuItem[] = [
 //   {
 //     id: 0,

@@ -11,6 +11,7 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "^6.5.8",
     "@react-navigation/native": "^6.1.7",
+    "@react-three/drei": "^9.79.3",
     "@react-three/fiber": "^8.13.5",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/react": "~18.0.27",
@@ -36,7 +37,8 @@
     "react-redux": "^8.1.1",
     "three": "^0.154.0",
     "typescript": "^4.9.4",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "lottie-react-native": "5.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
