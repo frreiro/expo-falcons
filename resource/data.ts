@@ -110,6 +110,21 @@ const Falcons: IFalcons = {
             },
           ],
         },
+        {
+          id: uuidv4(),
+          sectorName: 'Suspensão',
+          iconName: 'vector-triangle',
+          objects: [
+            {
+              id: uuidv4(),
+              iconName: 'alpha-a-circle',
+              name: 'Volante',
+              obj: require('@assets/obj/volante/volante.obj'),
+              material: require('@assets/obj/volante/volante.mtl'),
+              texture: require('@assets/obj/volante/polished_cherry.jpg'),
+            },
+          ],
+        },
         // electrical: [],
         // powertrain: [],
         // chassis: [],
