@@ -6,7 +6,6 @@ import MainLayout from '@app/layouts';
 import { useAppSelector } from '@redux/hooks';
 import { ObjectInfo, SectorInfo } from '@resource/data';
 import React, { useEffect, useState } from 'react';
-
 export default function Objects() {
   const year = useAppSelector(state => state.data);
   const [sector, setSector] = useState<SectorInfo | null>(null);
@@ -22,12 +21,11 @@ export default function Objects() {
   }, [year]);
 
   const sectorSubItemHandler = (item: SectorInfo) => {
-    console.log('clicado', item);
     setSector(item);
+    setObject(item.objects[0]);
   };
 
   const objectSubItemHandler = (item: ObjectInfo) => {
-    console.log('clicado', item);
     setObject(item);
   };
 
