@@ -1,7 +1,7 @@
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
 import { Canvas } from '@react-three/fiber/native';
 import { ObjectInfo } from '@resource/data';
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import {
   Gesture,
   GestureDetector,
@@ -10,6 +10,7 @@ import {
 import Animated, { useSharedValue } from 'react-native-reanimated';
 
 import Model from '../Model';
+import ModelTexture from '../ModelTexture';
 
 export type GestureHandlerProps = {
   object: ObjectInfo;
@@ -40,7 +41,12 @@ export default function GestureHandler(props: GestureHandlerProps) {
       isPressed.value = false;
     });
 
-  const zoom = useSharedValue(10);
+  const zoom = useSharedValue(props.object.obj.initialScale);
+
+  useEffect(() => {
+    zoom.value = props.object.obj.initialScale;
+  }, [props.object.obj.initialScale]);
+
   const startZoom = useSharedValue(0);
 
   const pintchGesture = Gesture.Pinch()
@@ -51,7 +57,7 @@ export default function GestureHandler(props: GestureHandlerProps) {
       zoom.value = startZoom.value;
     })
     .onUpdate(e => {
-      zoom.value = e.scale * 10;
+      zoom.value = e.scale * props.object.obj.initialScale;
     })
     .onEnd(() => {
       startZoom.value = zoom.value;
@@ -73,7 +79,15 @@ export default function GestureHandler(props: GestureHandlerProps) {
               <Suspense fallback={null}>
                 <ambientLight />
                 <pointLight position={[10, 10, 10]} />
-                <Model object={props.object} offset={offset} zoom={zoom} />
+                {props.object.textures.length ? (
+                  <ModelTexture
+                    object={props.object}
+                    offset={offset}
+                    zoom={zoom}
+                  />
+                ) : (
+                  <Model object={props.object} offset={offset} zoom={zoom} />
+                )}
               </Suspense>
             </Canvas>
           </Animated.View>

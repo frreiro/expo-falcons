@@ -1,7 +1,7 @@
 import { useFrame, useLoader } from '@react-three/fiber/native';
 import { ObjectInfo } from '@resource/data';
-import { THREE } from 'expo-three';
-import { useRef } from 'react';
+import { THREE, TextureLoader } from 'expo-three';
+import { useLayoutEffect, useRef } from 'react';
 import { SharedValue } from 'react-native-reanimated';
 import { Mesh } from 'three';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
@@ -13,7 +13,7 @@ type ModelProps = {
   zoom: SharedValue<number>;
 };
 
-export default function Model(props: ModelProps) {
+export default function ModelTexture(props: ModelProps) {
   const meshRef = useRef<Mesh>(null);
 
   const material = useLoader(
@@ -24,6 +24,20 @@ export default function Model(props: ModelProps) {
     material.preload();
     loader.setMaterials(material);
   }) as THREE.Group;
+
+  const paths = props.object.textures.map(texture => texture.path);
+
+  const loadedTextures = useLoader(TextureLoader, paths);
+
+  useLayoutEffect(() => {
+    obj.traverse(child => {
+      if (child instanceof THREE.Mesh) {
+        props.object.textures.forEach((texture, index) => {
+          child.material[texture.type] = loadedTextures[index];
+        });
+      }
+    });
+  }, [obj]);
 
   useFrame((state, delta) => {
     const x = (props.offset.value.x * 100) / 5000;
