@@ -3,9 +3,10 @@ import { Documents, YearsData } from '@resource/data';
 import { Image } from 'expo-image';
 import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { Platform, Text, TouchableWithoutFeedback, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import pdfAndroid from './PDFAndroid';
 import { styles } from './styles';
 
 export interface IDocument {
@@ -21,8 +22,12 @@ export default function PDFComponent(props: IDocument) {
   const openPDF = async () => {
     //FIXME: Gerenciar erro
     try {
-      const url = props.fileURL;
-      await WebBrowser.openBrowserAsync(url);
+      Platform.OS === 'android'
+        ? await pdfAndroid({
+            name: props.fileName,
+            remoteURL: props.fileURL,
+          })
+        : await WebBrowser.openBrowserAsync(props.fileURL);
     } catch (error) {
       console.log('Error to open file');
     }
