@@ -199,17 +199,12 @@ const Falcons: IFalcons = {
               iconName: 'alpha-a-circle',
               name: 'Luz de Freio',
               obj: {
-                path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/eletrica/luzdefreio/luzdefreio.obj?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZWxldHJpY2EvbHV6ZGVmcmVpby9sdXpkZWZyZWlvLm9iaiIsImlhdCI6MTY5MDMzMjA0MSwiZXhwIjoxNzIxODY4MDQxfQ.abGaUgfeGijp03gz06FqyPaiPGFczLXHWRdByvpvh5M&t=2023-07-26T00%3A40%3A41.380Z',
+                path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/eletrica/luzdefreio/luzdefreio.obj?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZWxldHJpY2EvbHV6ZGVmcmVpby9sdXpkZWZyZWlvLm9iaiIsImlhdCI6MTY5MDMzMzQyNSwiZXhwIjoxNzIxODY5NDI1fQ.9DpmlqFiW2fNtnZAZOitKye-mF1qMZSS_7pUxe8AIhg&t=2023-07-26T01%3A03%3A46.073Z',
                 initialScale: 10,
               },
               material:
-                'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/eletrica/luzdefreio/luzdefreio.mtl?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZWxldHJpY2EvbHV6ZGVmcmVpby9sdXpkZWZyZWlvLm10bCIsImlhdCI6MTY5MDMzMjA1MywiZXhwIjoxNzIxODY4MDUzfQ.NuIzZ5R1wx5uGlpoVKfk3JLXGMEJp6ZDZ9vN5lg5ZIw&t=2023-07-26T00%3A40%3A54.147Z',
-              textures: [
-                {
-                  path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/eletrica/luzdefreio/plasticmt11150_normalmap.dds?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZWxldHJpY2EvbHV6ZGVmcmVpby9wbGFzdGljbXQxMTE1MF9ub3JtYWxtYXAuZGRzIiwiaWF0IjoxNjkwMzMyMDY3LCJleHAiOjE3MjE4NjgwNjd9.ls3npq2Erx9RcXCxnlZ-JPtTcZFHglszBraOzMG4YOg&t=2023-07-26T00%3A41%3A08.002Z',
-                  type: 'bumpMap',
-                },
-              ],
+                'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/eletrica/luzdefreio/luzdefreio.mtl?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZWxldHJpY2EvbHV6ZGVmcmVpby9sdXpkZWZyZWlvLm10bCIsImlhdCI6MTY5MDMzMzQwNSwiZXhwIjoxNzIxODY5NDA1fQ.PlzKfFZLXJQCJWKmYb9QG2BTk_xyn0DDrb4xR1GVymc&t=2023-07-26T01%3A03%3A26.181Z',
+              textures: [],
             },
             {
               id: uuidv4(),

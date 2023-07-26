@@ -58,7 +58,10 @@ export default function FloatingButton<K extends SubMenuItem>({
           <FloatingItem
             key={item.id}
             animate={animate}
-            selectSubItem={selectSubItem}
+            selectSubItem={item => {
+              toggleMenu();
+              return selectSubItem(item);
+            }}
             primitivePosition={index + 1}
             item={item}
           />
