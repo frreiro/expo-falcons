@@ -103,7 +103,7 @@ const Falcons: IFalcons = {
     {
       id: uuidv4(),
       year: '2023',
-      image: require('../assets/images/carro.png'),
+      image: require('../assets/images/carro-2023.png'),
       title: 'Protótipo 2023',
       documents: [],
       augment_reality: [
