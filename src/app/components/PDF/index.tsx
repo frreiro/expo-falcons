@@ -1,11 +1,12 @@
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
+import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { Documents, YearsData } from '@resource/data';
 import { Image } from 'expo-image';
-import * as WebBrowser from 'expo-web-browser';
 import React from 'react';
 import { Platform, Text, TouchableWithoutFeedback, View } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import { RootBottomParamList } from '../TabItens';
 import pdfAndroid from './PDFAndroid';
 import { styles } from './styles';
 
@@ -18,7 +19,14 @@ export interface IDocument {
   fileURL: Documents['file_url'];
 }
 
+export interface PDFInfo {
+  remoteURL: string;
+  name: string;
+}
+
 export default function PDFComponent(props: IDocument) {
+  const navigation = useNavigation<NavigationProp<RootBottomParamList>>();
+
   const openPDF = async () => {
     //FIXME: Gerenciar erro
     try {
@@ -27,7 +35,11 @@ export default function PDFComponent(props: IDocument) {
             name: props.fileName,
             remoteURL: props.fileURL,
           })
-        : await WebBrowser.openBrowserAsync(props.fileURL);
+        : navigation.navigate('Webview', {
+            remoteURL: props.fileURL,
+            name: props.fileName,
+          });
+      // await WebBrowser.openBrowserAsync(props.fileURL);
     } catch (error) {
       console.log('Error to open file');
     }

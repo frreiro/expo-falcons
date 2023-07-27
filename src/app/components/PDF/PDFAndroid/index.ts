@@ -1,10 +1,7 @@
 import * as FileSystem from 'expo-file-system';
 import * as IntentLauncher from 'expo-intent-launcher';
 
-export interface PDFInfo {
-  remoteURL: string;
-  name: string;
-}
+import { PDFInfo } from '..';
 
 export default async function pdfAndroid(pdf: PDFInfo) {
   const localPath = `${FileSystem.cacheDirectory}${pdf.name}`;

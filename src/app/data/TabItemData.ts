@@ -1,11 +1,11 @@
-import { RootStackParamList } from '@components/TabItens';
+import { RootBottomParamList } from '@components/TabItens';
 import Objects from '@pages/3D';
 import Documents from '@pages/Documents';
 import Home from '@pages/Home';
 
 export type TabInfoType = {
   id: number;
-  name: keyof RootStackParamList;
+  name: keyof RootBottomParamList;
   focusedIcon: string;
   unfocusedIcon: string;
   component: () => JSX.Element;
