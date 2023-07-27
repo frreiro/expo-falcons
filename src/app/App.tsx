@@ -55,7 +55,9 @@ export default function App() {
             <Stack.Screen
               name="Webview"
               component={PDFIos}
-              options={{ headerShown: true }}
+              options={{
+                headerShown: true,
+              }}
             />
           </Stack.Navigator>
         </NavigationContainer>

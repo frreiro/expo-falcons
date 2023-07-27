@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     height: 120,
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     backgroundColor: GlobalStyles.colors.primary,
   },
   text_title: {
