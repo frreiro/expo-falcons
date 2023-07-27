@@ -11,7 +11,6 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Webview'>;
 
 export default function PDFIos(props: Props) {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  console.log(props);
   useEffect(() => {
     if (!props.route.params.name || !props.route.params.remoteURL) {
       navigation.goBack();

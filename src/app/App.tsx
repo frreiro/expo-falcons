@@ -48,13 +48,15 @@ export default function App() {
     <ReduxProvider>
       <View style={styles.container} onLayout={onLayoutRootView}>
         <NavigationContainer>
-          <Stack.Navigator initialRouteName="App">
+          <Stack.Navigator
+            initialRouteName="App"
+            screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="App" component={Tabs} />
             <Stack.Screen
-              name="App"
-              component={Tabs}
-              options={{ headerShown: false }}
+              name="Webview"
+              component={PDFIos}
+              options={{ headerShown: true }}
             />
-            <Stack.Screen name="Webview" component={PDFIos} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
