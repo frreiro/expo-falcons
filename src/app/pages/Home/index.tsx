@@ -1,5 +1,5 @@
 import Car from '@app/components/Car';
-import { RootStackParamList } from '@app/components/TabItens';
+import { RootBottomParamList } from '@app/components/TabItens';
 import MainLayout from '@app/layouts';
 import CustomSwiper from '@components/CustomSwiper';
 import { GlobalStyles } from '@globalStyle/GlobalStyles';
@@ -18,7 +18,7 @@ export default function Home() {
   const indexRef = useRef<number>(0);
   const dispatch = useAppDispatch();
 
-  const navigate = useNavigation<NavigationProp<RootStackParamList>>();
+  const navigate = useNavigation<NavigationProp<RootBottomParamList>>();
 
   const setFalconsData = () => {
     const actualFalconsSlideYear = Falcons.years[indexRef.current];

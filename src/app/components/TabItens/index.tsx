@@ -4,13 +4,16 @@ import { GlobalStyles } from '@globalStyle/GlobalStyles';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
 
-export type RootStackParamList = {
+import { PDFInfo } from '../PDF';
+
+export type RootBottomParamList = {
   Home: undefined;
   Objects: undefined;
   Documents: undefined;
+  Webview?: PDFInfo;
 };
 
-const Tab = createBottomTabNavigator<RootStackParamList>();
+const Tab = createBottomTabNavigator<RootBottomParamList>();
 
 export default function Tabs({
   TabItens = tabItens,
