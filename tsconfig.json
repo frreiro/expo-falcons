@@ -5,6 +5,7 @@
     "module": "es6",
     "baseUrl": ".",
     "paths": {
+      "@config/*": ["config/*"],
       "@assets/*": ["assets/*"],
       "@app/*": ["src/app/*"],
       "@components/*": ["src/app/components/*"],
