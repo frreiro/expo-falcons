@@ -124,10 +124,10 @@ const Falcons: IFalcons = {
                 path: require('@assets/obj/breakdisk/breakdisk.obj'),
                 initialScale: 10,
               },
-              material: require('@assets/obj/breakdisk/breakdisk.mtl'),
+              material: require('@assets/obj/breakdisk/texture/breakdisk.mtl'),
               textures: [
                 {
-                  path: require('@assets/obj/breakdisk/swsand_bump.jpg'),
+                  path: require('@assets/obj/breakdisk/texture/swsand_bump.jpg'),
                   type: 'bumpMap',
                 },
               ],
@@ -147,10 +147,10 @@ const Falcons: IFalcons = {
                 path: require('@assets/obj/volante/volante.obj'),
                 initialScale: 10,
               },
-              material: require('@assets/obj/volante/volante.mtl'),
+              material: require('@assets/obj/volante/texture/volante.mtl'),
               textures: [
                 {
-                  path: require('@assets/obj/volante/polished_cherry.jpg'),
+                  path: require('@assets/obj/volante/texture/polished_cherry.jpg'),
                   type: 'map',
                 },
               ],
