@@ -28,20 +28,20 @@ export default function PDFComponent(props: IDocument) {
   const navigation = useNavigation<NavigationProp<RootBottomParamList>>();
 
   const openPDF = async () => {
-    //FIXME: Gerenciar erro
     try {
-      Platform.OS === 'android'
-        ? await pdfAndroid({
-            name: props.fileName,
-            remoteURL: props.fileURL,
-          })
-        : navigation.navigate('Webview', {
-            remoteURL: props.fileURL,
-            name: props.fileName,
-          });
-      // await WebBrowser.openBrowserAsync(props.fileURL);
+      if (Platform.OS === 'android') {
+        await pdfAndroid({
+          name: props.fileName,
+          remoteURL: props.fileURL,
+        });
+      } else {
+        navigation.navigate('Webview', {
+          remoteURL: props.fileURL,
+          name: props.fileName,
+        });
+      }
     } catch (error) {
-      console.log('Error to open file');
+      console.log('Error to open file', error);
     }
   };
 

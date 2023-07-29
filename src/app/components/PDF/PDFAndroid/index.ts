@@ -11,8 +11,15 @@ export default async function pdfAndroid(pdf: PDFInfo) {
     let fileData: FileSystem.FileInfo | FileSystem.FileSystemDownloadResult =
       fileInfo;
     if (!fileInfo.exists) {
-      const response = await FileSystem.downloadAsync(pdf.remoteURL, localPath);
-      fileData = response;
+      try {
+        const response = await FileSystem.downloadAsync(
+          pdf.remoteURL,
+          localPath,
+        );
+        fileData = response;
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     const content = await FileSystem.getContentUriAsync(fileData.uri);
