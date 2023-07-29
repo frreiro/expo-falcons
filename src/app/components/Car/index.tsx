@@ -13,11 +13,7 @@ export type CardType = {
 export default function Car(props: CardType) {
   return (
     <View style={styles.container}>
-      <Image
-        source={props.image_uri}
-        style={styles.car}
-        onLoad={data => console.log(data)}
-      />
+      <Image source={props.image_uri} style={styles.car} />
       <Text style={styles.car_text}>{props.name}</Text>
     </View>
   );
