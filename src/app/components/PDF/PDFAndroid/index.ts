@@ -5,7 +5,6 @@ import { PDFInfo } from '..';
 
 export default async function pdfAndroid(pdf: PDFInfo) {
   const localPath = `${FileSystem.cacheDirectory}${pdf.name}`;
-  console.log(localPath);
   try {
     const fileInfo = await FileSystem.getInfoAsync(localPath);
     let fileData: FileSystem.FileInfo | FileSystem.FileSystemDownloadResult =
