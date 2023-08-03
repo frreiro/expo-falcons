@@ -121,13 +121,14 @@ const Falcons: IFalcons = {
               iconName: 'alpha-a-circle',
               name: 'Disco de freio',
               obj: {
-                path: require('@assets/obj/breakdisk/breakdisk.obj'),
+                path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/freio/breakdisk/breakdisk.obj?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZnJlaW8vYnJlYWtkaXNrL2JyZWFrZGlzay5vYmoiLCJpYXQiOjE2OTA4NjEwMDcsImV4cCI6MTcyMjM5NzAwN30.irGjmOuVSRgIxgGfIwCvoY7zrtNlKmKwtLFe_ybmvp4&t=2023-08-01T03%3A36%3A47.938Z',
                 initialScale: 10,
               },
-              material: require('@assets/obj/breakdisk/texture/breakdisk.mtl'),
+              material:
+                'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/freio/breakdisk/breakdisk.mtl?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZnJlaW8vYnJlYWtkaXNrL2JyZWFrZGlzay5tdGwiLCJpYXQiOjE2OTA4NjA5NzUsImV4cCI6MTcyMjM5Njk3NX0.XtVMcYah30uOd4gOdVCujJSTcL6KTY1BQ2OCUHIbS3Y&t=2023-08-01T03%3A36%3A16.124Z',
               textures: [
                 {
-                  path: require('@assets/obj/breakdisk/texture/swsand_bump.jpg'),
+                  path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/freio/breakdisk/swsand_bump.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvZnJlaW8vYnJlYWtkaXNrL3N3c2FuZF9idW1wLmpwZyIsImlhdCI6MTY5MDg2MDk5NiwiZXhwIjoxNzIyMzk2OTk2fQ.obKj00HFfWdSPxg0XdlBbroKtlqhmzMQYyPvK4z4ooE&t=2023-08-01T03%3A36%3A37.148Z',
                   type: 'bumpMap',
                 },
               ],
@@ -144,13 +145,14 @@ const Falcons: IFalcons = {
               iconName: 'alpha-a-circle',
               name: 'Volante',
               obj: {
-                path: require('@assets/obj/volante/volante.obj'),
+                path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/suspensao/volante/volante.obj?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvc3VzcGVuc2FvL3ZvbGFudGUvdm9sYW50ZS5vYmoiLCJpYXQiOjE2OTA4NjEwNDMsImV4cCI6MTcyMjM5NzA0M30.Pn73Nq4Zo3ggcpScsWye0bJkrmlp9_spYb7ViIj-lIM&t=2023-08-01T03%3A37%3A23.767Z',
                 initialScale: 10,
               },
-              material: require('@assets/obj/volante/texture/volante.mtl'),
+              material:
+                'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/suspensao/volante/volante.mtl?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvc3VzcGVuc2FvL3ZvbGFudGUvdm9sYW50ZS5tdGwiLCJpYXQiOjE2OTA4NjEwMzIsImV4cCI6MTcyMjM5NzAzMn0.j6ErF_F78hCPQTUecry3oH3HvJ_T1S9HqDODYgcInP8&t=2023-08-01T03%3A37%3A12.950Z',
               textures: [
                 {
-                  path: require('@assets/obj/volante/texture/polished_cherry.jpg'),
+                  path: 'https://zhsvzqsuzdnxigghqvms.supabase.co/storage/v1/object/sign/3ds/suspensao/volante/polished_cherry.jpg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiIzZHMvc3VzcGVuc2FvL3ZvbGFudGUvcG9saXNoZWRfY2hlcnJ5LmpwZyIsImlhdCI6MTY5MDg2MTAyMiwiZXhwIjoxNzIyMzk3MDIyfQ.1t78wm-qPAKaHtKfpLdWu47rLoNuVVo6KZleMJNGLn4&t=2023-08-01T03%3A37%3A03.197Z',
                   type: 'map',
                 },
               ],
