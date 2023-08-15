@@ -68,6 +68,8 @@ $ yarn run start
 
 | Version    | Supported | Website active                                                   |
 | ---------- | --------- | ---------------------------------------------------------------- |
-| development | Yes       | [Play Store]("https://play.google.com/store/apps/details?id=com.ufformula.falcons&pli=1") |
+| development | Yes       | `https://play.google.com/store/apps/details?id=com.ufformula.falcons&pli=1` |
+
+[Play Store](https://play.google.com/store/apps/details?id=com.ufformula.falcons&pli=1)
 
 
